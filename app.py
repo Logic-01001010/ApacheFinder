@@ -93,4 +93,21 @@ if __name__ == '__main__':
 					ip = str(A)+"."+str(B)+"."+str(C)+"."+str(D)
 
 					scanServer(ip)
-	
+
+					if json_data['B'] >= 255:
+
+						json_data['B'] = 0
+
+					if json_data['C'] >= 255:
+
+						json_data['C'] = 0
+
+					if json_data['D'] >= 255:
+
+						json_data['D'] = 0
+
+	print('\n**************')
+
+	print('jobs finished!')
+
+	print('**************\n')
